@@ -117,7 +117,7 @@ const Home: NextPage = () => {
               <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
               <p>
                 Explore your local transactions with the{" "}
-                <Link href="http://54.169.70.143/" passHref className="link">
+                <Link href="https://explorer-dev.zgv2b.breederdao.io/" passHref className="link">
                   Block Explorer
                 </Link>{" "}
                 tab.

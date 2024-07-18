@@ -1,4 +1,30 @@
+import { defineChain } from "viem";
 import * as chains from "viem/chains";
+
+export const breeder = defineChain({
+  id: 88481,
+  name: "BreederDevnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "BREED",
+    symbol: "BREED",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://zgv2b.breederdao.io/"],
+      webSocket: ["wss://zgv2b.breederdao.io/"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "http://54.169.70.143" },
+  },
+  // contracts: {
+  //   multicall3: {
+  //     address: "0xcA11bde05977b3631167028862bE2a173976CA11",
+  //     blockCreated: 5882,
+  //   },
+  // },
+});
 
 export type ScaffoldConfig = {
   targetNetworks: readonly chains.Chain[];
@@ -10,7 +36,8 @@ export type ScaffoldConfig = {
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.foundry],
+  targetNetworks: [breeder],
+  // targetNetworks: [chains.foundry],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)

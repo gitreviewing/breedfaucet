@@ -16,7 +16,7 @@ export const breeder = defineChain({
     },
   },
   blockExplorers: {
-    default: { name: "Explorer", url: "http://54.169.70.143" },
+    default: { name: "Explorer", url: "https://explorer-dev.zgv2b.breederdao.io" },
   },
   // contracts: {
   //   multicall3: {
